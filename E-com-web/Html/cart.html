@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>E-Com Web</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #F7F7F7;">
+    <!-- Header Section -->
+
+    <header style="background-color: #EEEEEE; width: 100%;" class="fixed-top">
+        <div id="header-container" style="height: 85px;">
+            <div class="container d-flex align-items-center justify-content-between py-3">
+                <a href="index.html">
+                    <h1 class="fw-bold text-dark">Online Store</h1>
+                </a>
+
+                <div id="menu-btn"><i class="bi bi-list"></i></div>
+                <div id="cross-btn"><i class="bi bi-x"></i></div>
+
+                <nav id="navbar">
+                    <a href="#" class="active">Home</a>
+                    <a href="#products">Products</a>
+
+                    <a href="#categories" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">Categories <span class="text-center">
+                            <i class="bi bi-chevron-down"></i>
+                        </span></a>
+
+
+
+
+                    <div class="dropdown-menu" aria-labelledby="triggerId">
+                        <button class="dropdown-item" href="#">Men's Clothing</button>
+                        <button class="dropdown-item" href="#">Jwellery</button>
+                        <button class="dropdown-item" href="#">Electronics</button>
+                        <button class="dropdown-item" href="#">Women's Clothing</button>
+                    </div>
+
+
+                </nav>
+
+                <div id="buttons">
+                    <button type="button" id="cart-btn" class="same-btns"> <span>
+                            <i class="bi bi-cart"></i>
+                        </span> Cart <span id="count">0</span></button>
+                    <button type="button" id="dark-btn" class="same-btns ms-2"><span>
+                            <i class="bi bi-moon"></i>
+                        </span> Dark</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- Cart Section -->
+
+        <section id="cart-section" class="mt-5 py-5">
+            <div class="container border-bottom border-danger">
+                <table class="table table-hover mt-5">
+                    <thead>
+                      <tr>
+                        <th scope="col" class="text-center">Delete</th>
+                        <th scope="col" class="text-center text-md-start">Product</th>
+                        <th scope="col">Price</th>
+                      </tr>
+                    </thead>
+                    <tbody id="cart-container">
+                      <!-- <tr>
+                        <th scope="row" id="delete"><i class="bi bi-trash"></i></th>
+                        <td>
+                            <div id="cart-product">
+                                <img src="/images/electronics-banner.jpg" alt="" class="img-fluid rounded">
+                                <p class="text-wrap text-break">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, soluta!</p>
+                            </div>
+                        </td>
+                        <td>$999</td>                     
+                      </tr> -->
+                     
+                    </tbody>
+                  </table>
+            </div>
+        </section>
+
+        <!-- Total Price -->
+
+        <div id="checkout" class="container">
+            <div id="content">
+                <h5>Total amount : <span id="amount"></span></h5>
+                <h5>Gov. tax : <span id="tax"></span></h5>
+                <p class="text-danger">Tax rate of 10%</p>
+                <h5 class="border-top border-dark w-50 pt-3">Amount to pay : <span id="total-amount"></span></h5>
+                <button type="button" class="btn btn-danger mt-4">Proceed to checkout</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="pt-5">
+
+        <!-- Social Media -->
+
+        <div class="bg-dark">
+            <div class="container py-5 d-flex align-items-start align-items-sm-center justify-content-between flex-column flex-sm-row gap-5 gap-sm-0">
+                <div id="follow">
+                    <h4 class="text-light fw-bold mb-4">FOLLOW US</h4>
+                    <div id="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div id="newsletter">
+                    <h4 class="text-light fw-bold mb-4 text-uppercase">Newsletter Subscription</h4>
+                    <input type="email" placeholder="Email Address" id="email">
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+
+        <div id="footer-container">
+            <div class="container d-flex justify-content-between flex-wrap gap-4">
+                <div id="categories">
+                    <h4 class="fw-bold mb-4 text-light text-uppercase">Top Category</h4>
+                    <ul class="p-0">
+                        <li>Men's Clothing</li>
+                        <li>Jwellery</li>
+                        <li>Electronics</li>
+                        <li>Women's Clothing</li>
+                    </ul>
+                </div>
+
+                <div id="help">
+                    <h4 class="fw-bold mb-4 text-light text-uppercase">Help</h4>
+                    <ul class="p-0">
+                        <li>Deleviry</li>
+                        <li>Returns</li>
+                        <li>Secure Payments</li>
+                        <li>Track an order</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+
+                <div id="about-us">
+                    <h4 class="fw-bold mb-4 text-light text-uppercase">About Us</h4>
+                    <ul class="p-0">
+                        <li>Carrers</li>
+                        <li>Terms and Conditions</li>
+                        <li>Secure Payments</li>
+                        <li>Privacy Policy</li>
+                        <li>Responsibility</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-light mt-5 text-center"><span><i class="bi bi-c-circle"></i> 2024 Online Store. All Rights Reserved</span></p>
+        </div>
+    </footer>
+
+
+
+
+
+    <!-- Script Links -->
+
+    <script src="/JavaScript/cart.js"></script>
+    <script src="/JavaScript/nav.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
